@@ -1,0 +1,12 @@
+name: patient-communications-service
+port: 8109
+lang: python
+description: "patient-communications-service \u2014 domain: patients"
+http_deps:
+- patients-service
+- notifications-service
+- audit-log-service
+publishes:
+- audit.event
+subscribes:
+- patient.created
